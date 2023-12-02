@@ -1,6 +1,5 @@
 use std::collections::HashMap;
-use std::fs::File;
-use std::io::{BufRead, BufReader};
+use crate::utils::read_file;
 
 pub fn day_01() {
     part_1();
@@ -80,14 +79,4 @@ fn part_1() {
         sum = sum + number_string.parse::<u32>().unwrap();
     }
     println!("Sum is {}", sum);
-}
-
-fn read_file(filepath: &str) -> Vec<String> {
-    let file = File::open(filepath).unwrap();
-    let reader = BufReader::new(file);
-    let mut lines = Vec::new();
-    for line in reader.lines() {
-        lines.push(line.unwrap());
-    }
-    return lines;
 }
