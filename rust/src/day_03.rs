@@ -66,7 +66,7 @@ fn part1(lines: Vec<String>) -> u32 {
 }
 
 fn part2(lines: Vec<String>) -> u32 {
-    let mut symbols: Vec<Symbol> = vec![];;
+    let mut symbols: Vec<Symbol> = vec![];
     for (i, line) in lines.iter().enumerate() {
         let mut affecting_positions: Vec<(u32,u32)> = vec![];
         for (j, character) in line.char_indices() {
